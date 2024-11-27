@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav input,
+header nav button,
+header nav .nav-button {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 1rem;
+}
+
+header nav button {
+    cursor: pointer;
+    background-color: rgb(255, 145, 61);
+    font-weight: 600;
+}
+
+header nav button:hover {
+    background-color: rgb(255, 157, 83);
+}
+
+header nav .nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(34, 34, 34);
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+header nav .nav-button:hover {
+    background-color: rgb(255, 145, 61);
+}
+#trending-series {
+    text-align: center;
+    border: 1px solid grey;
+    margin: 20px;
+    border-radius: 5px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    gap: 1rem;
+    margin: 10px 5rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3rem;
+}
+img {
+    height: 12rem;
+    width: 8rem;
+    border-radius: 5px;
+    transition: all 0.3 ease-in-out;
+    border: 3px solid grey;
+}
+img:hover {
+    border: 3px solid rgb(0, 255, 38);
+}
+.cardBaslik {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    width: 128px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-size: 0.8rem;
+}
+/* DETAILS HTML */
+#details {
+    display: flex;
+    justify-content: space-between;
+}
+#poster {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-left: 1.5rem;
+}
+#seriesTitle {font-weight: 800;}
+#seriesImage {height: 18rem; width: 12rem; border: 1px solid grey;} 
+
+#overview {
+    margin-top: 1.5rem;
+    min-width: 70%;
+    max-width: 70%;
+
+}
+#overviewTitle {
+    font-weight: 700;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.content {
+    display: none; 
+    color: #aaa;
+    font-size: 0.9rem;
+}
+.active {display: block;}
+
+#overviewIcon {
+    transform: rotateY(90deg);
+    transition: transform 0.3s ease;
+    padding-right: 10px;
+}
+
+.down {transform: rotateY(90deg);}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 1.5rem 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+.episodeInfo {
+    display: flex;
+}
+.episode img {
+    height: 100px;
+    width: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid grey;
+}
+.episode h4 {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+}
+.episodeInfo p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 5px 1rem;
+}
+#poster h3 {
+    margin: 20px 0 10px 0;
+}
+#seasonsDropdown {
+    appearance: none;
+    align-self: center;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em;
+}
+
+#seasonsDropdown:hover {
+    border-color: #888;
+    background-color: #333;
+}
+#seasonsDropdown:active {
+    background: none;
+}
+
+.cast-container {
+    width: 20rem;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 15px;
+    margin: 0 0;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    
+}
+.cast-container::-webkit-scrollbar {
+    height: 8px;
+}
+.cast-container::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 5px;
+}
+.cast-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+.cast-container::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 5px;
+}
+
+.cast-member {
+    width: 100px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.cast-member img {
+    width: 90px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid grey;
+}
+
+.cast-member h5 {
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.cast-member p {
+    margin: 2px 0;
+    font-size: 0.5rem;
+    color: #aaa;
+}

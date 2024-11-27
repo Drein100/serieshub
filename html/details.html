@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/tracking-project/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-button">Main Page</a>
+            <input type="text" id="query" placeholder="Enter TV show name.." />
+            <button id="searchButton">Search</button>
+        </nav>
+    </header>
+    <main>
+        <section id="details">
+            <div id="poster">
+                <h1 id="seriesTitle"></h1>
+                <div id="imageContainer">
+                    <img id="seriesImage" src="" alt="Series Poster">
+                </div>
+                <p id="tagline" style="font-style: italic; font-size: 14px; margin: 10px 0 0 0; opacity: 0.5;"></p>
+                <p id="genres" style="font-size: 14px; margin: 10px 0 0 0; opacity: 0.5; max-width: 50%; align-self: center;"></p>
+                <h3>Seasons</h3>
+                <select id="seasonsDropdown">
+                    <option value="" disabled selected>Select a season</option>
+                </select>
+                <h3>Cast</h3>
+                <div id="castContainer" class="cast-container"></div>
+            </div>
+            <div id="overview">
+                <div id="overviewTitle" class="collapsible">
+                    <span><span id="overviewIcon">➤</span> Overview</span>
+                </div>
+                <div id="overviewText" class="content active"></div>
+                <div id="episodesContainer"></div>
+            </div>
+        </section>
+    </main>
+    <script src="/tracking-project/js/details.js"></script>
+</body>
+</html>
