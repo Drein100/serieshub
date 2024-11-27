@@ -36,7 +36,7 @@ function displayShows(shows) {
         title.textContent = name;
 
         const link = document.createElement("a");
-        link.href = `details.html?id=${id}`;
+        link.href = `html/details.html?id=${id}`;
 
         const image = document.createElement("img");
         image.src = poster_path
@@ -61,7 +61,7 @@ document.getElementById('searchButton').addEventListener('click', () => {
     const query = document.getElementById('query').value.trim();
     if (query) {
         // Arama sayfasına yönlendirme
-        window.location.href = `search.html?query=${query}`;
+        window.location.href = `html/search.html?query=${query}`;
     } else {
         alert("Please enter a TV show name!");
     }

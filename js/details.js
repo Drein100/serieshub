@@ -10,7 +10,7 @@ document.getElementById("searchButton").addEventListener("click", () => {
     const query = document.getElementById("query").value.trim();
     if (query) {
         // Redirect to index.html with the query as a parameter
-        window.location.href = `index.html?query=${encodeURIComponent(query)}`;
+        window.location.href = `search.html?query=${encodeURIComponent(query)}`;
     } else {
         alert("Please enter a TV show name!");
     }
